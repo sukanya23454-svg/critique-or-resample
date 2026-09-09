@@ -1,0 +1,6 @@
+torch
+transformers>=4.51.0
+accelerate
+pandas
+matplotlib
+bitsandbytes  # optional: only needed for 4-bit judge model loading on smaller VRAM
