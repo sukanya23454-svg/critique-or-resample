@@ -6,9 +6,9 @@ import os
 import time
 from typing import Callable, Iterable
 
-from uncertainty import SelfConsistencyTrigger, EntropyTrigger, trigger_error_correlation
-from critique_loop import CritiqueDebateLoop, AdaptiveRereasonLoop
-from token_utils import TokenCounter, total_pipeline_tokens
+from pipeline.uncertainty import SelfConsistencyTrigger, EntropyTrigger, trigger_error_correlation
+from pipeline.critique_loop import CritiqueDebateLoop, AdaptiveRereasonLoop
+from pipeline.token_utils import TokenCounter, total_pipeline_tokens
 
 
 CSV_FIELDS = [
@@ -76,8 +76,14 @@ def run_paired_condition(
             t0 = time.time()
             question, gold = sample["question"], sample["gold"]
 
+            print(f"\\n[{i + 1}/{len(dataset)}] Starting question...", flush=True)
+            print(f"[{i + 1}/{len(dataset)}] Question: {question[:200]}", flush=True)
+
             base_prompt = f"Question: {question}\nThink step by step, then give a final answer."
+
+            print(f"[{i + 1}/{len(dataset)}] Generating answer...", flush=True)
             initial_reasoning = base_generate_fn(base_prompt)
+            print(f"[{i + 1}/{len(dataset)}] Generation complete.", flush=True)
             baseline_answer = extract_answer_fn(initial_reasoning)
             baseline_correct = judge_correctness_fn(question, gold, baseline_answer)
             baseline_tokens = total_pipeline_tokens(token_counter, base_prompt, initial_reasoning)
@@ -200,6 +206,8 @@ def run_condition(
                 if trigger_fired:
                     tokens_used += [trace.critique, trace.revised_reasoning]
 
+            print(f"[{i + 1}/{len(dataset)}] Answer extracted: {final_answer[:200]}", flush=True)
+
             correct = judge_correctness_fn(question, gold, final_answer)
             n_tokens = total_pipeline_tokens(token_counter, *tokens_used)
 
@@ -218,6 +226,12 @@ def run_condition(
                 "wall_seconds": round(time.time() - t0, 3),
             })
 
+            print(
+                f"[{i + 1}/{len(dataset)}] DONE "
+                f"({round(time.time() - t0, 2)}s)",
+                flush=True,
+            )
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -231,7 +245,7 @@ def main():
     parser.add_argument("--trigger_type", default="self_consistency",
                          choices=["self_consistency", "entropy"])
     parser.add_argument("--n_samples", type=int, default=120)
-    parser.add_argument("--model_name", default="Qwen/Qwen3-7B",
+    parser.add_argument("--model_name", default="Qwen/Qwen3-8B",
                          help="base model: answers every condition")
     parser.add_argument("--judge_model_name", default="Qwen/Qwen2.5-32B-Instruct",
                          help="judge model: scores correctness only, never generates/revises")
@@ -246,14 +260,14 @@ def main():
                               "alone; default is 4-bit since that's what fits on 40GB cards.")
     args = parser.parse_args()
 
-    from dataset_loaders import load_strategyqa, load_hotpotqa
+    from pipeline.dataset_loaders import load_strategyqa, load_hotpotqa
 
     if args.dataset == "strategyqa":
         dataset = list(load_strategyqa(n=args.n_samples))
     else:
         dataset = list(load_hotpotqa(n=args.n_samples))
 
-    from model_backend import (
+    from pipeline.model_backend import (
         load_base_model, make_base_generate_fn, make_extract_answer_fn,
         load_judge_model, make_judge_correctness_fn,
     )
