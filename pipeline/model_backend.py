@@ -94,25 +94,49 @@ def make_base_generate_fn(loaded: LoadedModel, max_new_tokens: int = 512, temper
     return _generate
 
 
-def make_extract_answer_fn():
+def make_extract_answer_fn(dataset: str = "generic"):
     """
-    Naive final-answer extractor: looks for a "Final Answer:" line (which the
-    base prompt in run_pipeline.py asks the model to produce), falls back to
-    the last non-empty line if that pattern isn't found. Replace this with a
-    dataset-specific extractor (e.g. yes/no normalization for StrategyQA,
-    span matching for HotpotQA) once you're past smoke-testing -- this default
-    is intentionally generic so the pipeline is runnable immediately.
+    Dataset-aware answer extractor.
+
+    StrategyQA is a yes/no task, so normalize the model output to:
+    "yes", "no", or "unknown".
+
+    Other datasets retain the original generic extraction behavior.
     """
     pattern = re.compile(r"final answer[:\-]?\s*(.+)", re.IGNORECASE)
 
-    def _extract(raw_text: str) -> str:
+    def _extract_strategyqa(raw_text: str) -> str:
+        # Prefer an explicit final answer.
+        match = pattern.search(raw_text)
+        if match:
+            tail = match.group(1).strip().lower()
+            if re.search(r"\byes\b", tail):
+                return "yes"
+            if re.search(r"\bno\b", tail):
+                return "no"
+
+        # Otherwise look for yes/no near the end of the response.
+        tail = raw_text[-500:]
+
+        yes_matches = list(re.finditer(r"\byes\b", tail, re.IGNORECASE))
+        no_matches = list(re.finditer(r"\bno\b", tail, re.IGNORECASE))
+
+        last_yes = yes_matches[-1].start() if yes_matches else -1
+        last_no = no_matches[-1].start() if no_matches else -1
+
+        if last_yes == -1 and last_no == -1:
+            return "unknown"
+
+        return "yes" if last_yes > last_no else "no"
+
+    def _extract_generic(raw_text: str) -> str:
         match = pattern.search(raw_text)
         if match:
             return match.group(1).strip().split("\n")[0]
         lines = [l.strip() for l in raw_text.strip().split("\n") if l.strip()]
         return lines[-1] if lines else raw_text.strip()
 
-    return _extract
+    return _extract_strategyqa if dataset.lower() == "strategyqa" else _extract_generic
 
 
 # ---------------------------------------------------------------------------

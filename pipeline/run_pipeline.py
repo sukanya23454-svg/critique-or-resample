@@ -278,7 +278,7 @@ def main():
     # arm's nominal token ceiling (256 + 256) matches the re-reasoning arm's
     # single pass (512), rather than silently doubling it. See critique_loop.py.
     stage_generate_fn = make_base_generate_fn(base_loaded, max_new_tokens=256)
-    extract_answer_fn = make_extract_answer_fn()
+    extract_answer_fn = make_extract_answer_fn(dataset=args.dataset)
     token_counter = TokenCounter(args.model_name)
 
     if args.skip_judge:
