@@ -60,7 +60,12 @@ def load_strategyqa(
                 gold = "yes" if answer else "no"
             else:
                 gold = str(answer).strip().lower()
-            examples.append({"question": question, "gold": gold})
+            examples.append({
+                "question": question,
+                "gold": gold,
+                "facts": ex.get("facts", []),
+                "decomposition": ex.get("decomposition", []),
+            })
 
     if shuffle:
         random.Random(seed).shuffle(examples)

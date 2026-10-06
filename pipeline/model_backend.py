@@ -73,6 +73,7 @@ def make_base_generate_fn(loaded: LoadedModel, max_new_tokens: int = 512, temper
             add_generation_prompt=True,
             tokenize=True,
             return_tensors="pt",
+            enable_thinking=False,
         )
         if hasattr(input_ids, "input_ids"):
             input_ids = input_ids["input_ids"]
@@ -89,7 +90,11 @@ def make_base_generate_fn(loaded: LoadedModel, max_new_tokens: int = 512, temper
             )
 
         new_tokens = output_ids[0][input_ids.shape[-1]:]
-        return tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+        text = tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
+        print("\n========== RAW MODEL OUTPUT ==========")
+        print(text)
+        print("======================================\n")
+        return text
 
     return _generate
 

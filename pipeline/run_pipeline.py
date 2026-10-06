@@ -79,7 +79,7 @@ def run_paired_condition(
             print(f"\\n[{i + 1}/{len(dataset)}] Starting question...", flush=True)
             print(f"[{i + 1}/{len(dataset)}] Question: {question[:200]}", flush=True)
 
-            base_prompt = f"Question: {question}\nThink step by step, then give a final answer."
+            base_prompt = f"Question: {question}\nAnswer with only yes or no."
 
             print(f"[{i + 1}/{len(dataset)}] Generating answer...", flush=True)
             initial_reasoning = base_generate_fn(base_prompt)
@@ -91,7 +91,7 @@ def run_paired_condition(
             # Trigger evaluated exactly ONCE per question -- this is the shared
             # decision both arms below are conditioned on.
             answer_only_fn = lambda q: extract_answer_fn(base_generate_fn(
-                f"Question: {q}\nThink step by step, then give a final answer."
+                f"Question: {q}\nAnswer with only yes or no."
             ))
             result = trigger.is_uncertain(question, answer_only_fn)
             trigger_fired = result.is_uncertain
@@ -168,12 +168,11 @@ def run_condition(
         writer = csv.DictWriter(f, fieldnames=CSV_FIELDS)
         if write_header:
             writer.writeheader()
-
         for i, sample in enumerate(dataset):
             t0 = time.time()
             question, gold = sample["question"], sample["gold"]
+            base_prompt = f"Question: {question}\nAnswer with only yes or no."
 
-            base_prompt = f"Question: {question}\nThink step by step, then give a final answer."
             initial_reasoning = base_generate_fn(base_prompt)
 
             trigger_fired, trigger_signal, trigger_raw = False, "none", 0.0
@@ -192,7 +191,7 @@ def run_condition(
                 # Uncertainty check re-uses base_generate_fn to draw extra
                 # independent samples -- these count toward token cost.
                 answer_only_fn = lambda q: extract_answer_fn(base_generate_fn(
-                    f"Question: {q}\nThink step by step, then give a final answer."
+                    f"Question: {q}\nAnswer with only yes or no."
                 ))
                 result = trigger.is_uncertain(question, answer_only_fn)
                 trigger_fired = result.is_uncertain
@@ -273,7 +272,7 @@ def main():
     )
 
     base_loaded = load_base_model(args.model_name)
-    base_generate_fn = make_base_generate_fn(base_loaded, max_new_tokens=512)
+    base_generate_fn = make_base_generate_fn(base_loaded, max_new_tokens=768)
     # Half the single-pass budget for critique/revise stages, so the critique
     # arm's nominal token ceiling (256 + 256) matches the re-reasoning arm's
     # single pass (512), rather than silently doubling it. See critique_loop.py.
