@@ -1,0 +1,2 @@
+dataset,mode,n,accuracy,mean_tokens,trigger_rate
+strategyqa,baseline,29,,538.0,0.0
