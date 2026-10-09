@@ -116,19 +116,17 @@ class AdaptiveRereasonLoop:
                 trigger_info=trigger_info or {},
             )
 
-        if sampled_answers:
-            from collections import Counter
-            counts = Counter(sampled_answers)
-            majority_answer, _ = counts.most_common(1)[0]
-            second_reasoning = f"Majority vote from trigger samples: {majority_answer}"
-        else:
-            second_pass_prompt = f"Question: {question}\nThink through this again from scratch, step by step, then give a final answer."
-            second_reasoning = self.generate_fn(second_pass_prompt)
+        second_pass_prompt = (
+            f"Question: {question}\n"
+            "Think through this again from scratch, step by step, "
+            "then give a final answer."
+        )
+        second_reasoning = self.generate_fn(second_pass_prompt)
 
         return DebateTrace(
             question=question,
             initial_reasoning=initial_reasoning,
-            critique="(no critique -- blind re-reasoning baseline)",
+            critique="(independent re-generation; no critique)",
             revised_reasoning=second_reasoning,
             final_answer=self.extract_answer_fn(second_reasoning),
             was_escalated=True,

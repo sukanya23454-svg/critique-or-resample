@@ -21,7 +21,7 @@ CSV_FIELDS = [
 
 def build_trigger(trigger_type: str):
     if trigger_type == "self_consistency":
-        return SelfConsistencyTrigger(k=3)
+        return SelfConsistencyTrigger(k=3, majority_threshold=0.67)
     if trigger_type == "entropy":
         return EntropyTrigger(k=5, threshold=0.4)
     raise ValueError(f"unknown trigger_type: {trigger_type}")
@@ -41,6 +41,7 @@ def run_paired_condition(
     dataset: Iterable[dict],
     dataset_name: str,
     base_generate_fn: Callable[[str], str],
+    rereason_generate_fn: Callable[[str], str],
     extract_answer_fn: Callable[[str], str],
     judge_correctness_fn: Callable[[str, str, str], bool],
     token_counter: TokenCounter,
@@ -63,7 +64,7 @@ def run_paired_condition(
     question triggers in both runs, which silently breaks the paired analysis.
     """
     trigger = build_trigger(trigger_type)
-    rereason_loop = AdaptiveRereasonLoop(base_generate_fn, extract_answer_fn)
+    rereason_loop = AdaptiveRereasonLoop(rereason_generate_fn, extract_answer_fn)
     critique_loop = CritiqueDebateLoop(base_generate_fn, extract_answer_fn, stage_generate_fn=stage_generate_fn)
 
     write_header = not os.path.exists(out_csv_path)
@@ -90,12 +91,17 @@ def run_paired_condition(
 
             # Trigger evaluated exactly ONCE per question -- this is the shared
             # decision both arms below are conditioned on.
-            answer_only_fn = lambda q: extract_answer_fn(base_generate_fn(
-                f"Question: {q}\nAnswer with only yes or no."
-            ))
+            trigger_token_parts = []
+
+            def answer_only_fn(q):
+                prompt = f"Question: {q}\nAnswer with only yes or no."
+                raw_output = base_generate_fn(prompt)
+                trigger_token_parts.extend([prompt, raw_output])
+                return extract_answer_fn(raw_output)
+
             result = trigger.is_uncertain(question, answer_only_fn)
             trigger_fired = result.is_uncertain
-            trigger_tokens = total_pipeline_tokens(token_counter, *result.samples)
+            trigger_tokens = total_pipeline_tokens(token_counter, *trigger_token_parts)
 
             row = {
                 "sample_id": i, "dataset": dataset_name, "question": question,
@@ -114,12 +120,31 @@ def run_paired_condition(
                 # outcome -- this is what makes the comparison paired.
                 rereason_trace = rereason_loop.run(question, initial_reasoning, is_uncertain=True, sampled_answers=result.samples)
                 rereason_correct = judge_correctness_fn(question, gold, rereason_trace.final_answer)
-                rereason_tokens = total_pipeline_tokens(token_counter, rereason_trace.revised_reasoning)
+                rereason_prompt = (
+                    f"Question: {question}\n"
+                    "Think through this again from scratch, step by step, "
+                    "then give a final answer."
+                )
+                rereason_tokens = total_pipeline_tokens(
+                    token_counter, rereason_prompt, rereason_trace.revised_reasoning
+                )
 
                 critique_trace = critique_loop.run(question, initial_reasoning, is_uncertain=True)
                 critique_correct = judge_correctness_fn(question, gold, critique_trace.final_answer)
+
+                from pipeline.critique_loop import CRITIQUE_PROMPT_TEMPLATE, REVISE_PROMPT_TEMPLATE
+                critique_prompt = CRITIQUE_PROMPT_TEMPLATE.format(
+                    question=question, reasoning=initial_reasoning
+                )
+                revise_prompt = REVISE_PROMPT_TEMPLATE.format(
+                    question=question,
+                    reasoning=initial_reasoning,
+                    critique=critique_trace.critique,
+                )
                 critique_tokens = total_pipeline_tokens(
-                    token_counter, critique_trace.critique, critique_trace.revised_reasoning
+                    token_counter,
+                    critique_prompt, critique_trace.critique,
+                    revise_prompt, critique_trace.revised_reasoning,
                 )
 
                 row.update({
@@ -273,6 +298,7 @@ def main():
 
     base_loaded = load_base_model(args.model_name)
     base_generate_fn = make_base_generate_fn(base_loaded, max_new_tokens=768)
+    rereason_generate_fn = make_base_generate_fn(base_loaded, max_new_tokens=512)
     # Half the single-pass budget for critique/revise stages, so the critique
     # arm's nominal token ceiling (256 + 256) matches the re-reasoning arm's
     # single pass (512), rather than silently doubling it. See critique_loop.py.
@@ -300,6 +326,7 @@ def main():
             dataset=dataset,
             dataset_name=args.dataset,
             base_generate_fn=base_generate_fn,
+            rereason_generate_fn=rereason_generate_fn,
             extract_answer_fn=extract_answer_fn,
             judge_correctness_fn=judge_correctness_fn,
             token_counter=token_counter,

@@ -20,7 +20,7 @@ class TriggerResult:
 
 
 class SelfConsistencyTrigger:
-    def __init__(self, k: int = 3, majority_threshold: float = 1.0):
+    def __init__(self, k: int = 3, majority_threshold: float = 0.67):
         assert k >= 2, "need at least 2 generations to measure disagreement"
         self.k = k
         self.majority_threshold = majority_threshold  # fraction that must agree to call it "confident"
