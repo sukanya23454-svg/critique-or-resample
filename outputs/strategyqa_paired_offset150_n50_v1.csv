@@ -1,0 +1,51 @@
+sample_id,dataset,question,gold_answer,baseline_answer,baseline_correct,baseline_tokens,trigger_fired,trigger_signal,trigger_raw_value,trigger_samples,trigger_tokens,rereason_answer,rereason_correct,rereason_tokens,critique_answer,critique_correct,critique_tokens,wall_seconds
+0,strategyqa,Was Morris County named after a chief justice?,yes,yes,True,20,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",60,,,0,,,0,2.785
+1,strategyqa,Did Christopher Columbus break the fifth commandment in Christianity?,yes,no,False,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.692
+2,strategyqa,"Is ""A Tale of Two Cities"" a popular science novel?",no,no,True,24,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",72,,,0,,,0,2.773
+3,strategyqa,"If you're running focal fossa, are you using linux?",yes,yes,True,24,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",72,,,0,,,0,2.765
+4,strategyqa,Is Menthol associated with Thanksgiving?,no,no,True,18,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",54,,,0,,,0,2.518
+5,strategyqa,Does a sea otter eat spiders?,no,no,True,19,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",57,,,0,,,0,2.522
+6,strategyqa,Is Jack Black unlikely to compete with Bear McCreary for an award?,yes,yes,True,26,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",78,,,0,,,0,2.794
+7,strategyqa,Is sunscreen unhelpful for the condition that killed Bob Marley?,yes,no,False,25,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",75,,,0,,,0,2.79
+8,strategyqa,Did Clark Gable marry more women once than Richard Burton?,yes,yes,True,23,True,self_consistency,0.33333333333333337,"[""no"", ""yes"", ""yes""]",69,no,False,461,no,False,733,118.571
+9,strategyqa,Was King Kong (2005 film) solvent?,yes,yes,True,23,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",69,,,0,,,0,2.745
+10,strategyqa,Was ethanol beneficial to Jack Kerouac's health?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.728
+11,strategyqa,Is a Boeing 737 cost covered by Wonder Woman (2017 film) box office receipts?,yes,no,False,34,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",102,,,0,,,0,3.025
+12,strategyqa,Did Julio Gonzalez like acetylene?,yes,no,False,19,True,self_consistency,0.33333333333333337,"[""no"", ""no"", ""yes""]",57,yes,True,462,no,False,606,104.669
+13,strategyqa,Could a markhor give birth three times in a single year?,no,no,True,24,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",72,,,0,,,0,2.817
+14,strategyqa,Could Buzz Aldrin have owned a computer?,yes,yes,True,20,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",60,,,0,,,0,2.572
+15,strategyqa,Can a lemon aggravate dyspepsia?,yes,yes,True,21,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",63,,,0,,,0,2.614
+16,strategyqa,Would Jason Voorhees hypothetically fail at being a martyr?,yes,yes,True,24,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",72,,,0,,,0,2.811
+17,strategyqa,Do people put creatures from the Black Sea on their pizza?,yes,no,False,23,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",69,,,0,,,0,2.808
+18,strategyqa,Would WWF be angrier if you killed koala instead of black swan?,yes,no,False,28,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",84,,,0,,,0,2.865
+19,strategyqa,Does Andrew Johnson's presidential number exceed Elagabalus's Emperor number?,no,yes,False,26,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",78,,,0,,,0,2.879
+20,strategyqa,Were deaths from Apollo 13 mission eclipsed by other space missions?,yes,no,False,26,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",78,,,0,,,0,2.796
+21,strategyqa,Were paparazzi involved in the death of a member of the royal family?,yes,no,False,27,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",81,,,0,,,0,2.848
+22,strategyqa,Does Metallica use Soulseek?,no,no,True,18,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",54,,,0,,,0,2.48
+23,strategyqa,Would the Cookie Monster decline an offer of free Keebler products?,no,no,True,24,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",72,,,0,,,0,2.729
+24,strategyqa,Have Jamie Lee Curtis been the subject of fake news?,yes,yes,True,22,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",66,,,0,,,0,2.625
+25,strategyqa,Does a Trek 9000 require an anchor in order to park?,no,no,True,27,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",81,,,0,,,0,2.821
+26,strategyqa,Would you spend less on your food at Aldi than at Whole Foods?,yes,yes,True,26,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",78,,,0,,,0,2.812
+27,strategyqa,Would a Dolce & Gabbana suit wearer be shunned by their Amish cousins?,yes,no,False,30,True,self_consistency,0.33333333333333337,"[""yes"", ""yes"", ""no""]",90,yes,True,530,no,False,632,115.221
+28,strategyqa,Would it be difficult for Kami Rita to climb Mount Emei?,no,no,True,25,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",75,,,0,,,0,2.867
+29,strategyqa,Would an expensive tailor use adhesive to create a shorter hem on slacks?,no,no,True,26,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",78,,,0,,,0,2.941
+30,strategyqa,Could a chipmunk fit 100 chocolate chips in his mouth?,no,no,True,27,True,self_consistency,0.33333333333333337,"[""no"", ""yes"", ""no""]",81,unknown,False,547,unknown,False,747,134.229
+31,strategyqa,Are all types of pottery safe to cook in?,no,no,True,21,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",63,,,0,,,0,2.655
+32,strategyqa,Could amoebas have played a part in the Black Death?,yes,yes,True,24,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",72,,,0,,,0,2.977
+33,strategyqa,Would Sophist's have hypothetically made good lawyers?,yes,yes,True,22,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",66,,,0,,,0,2.676
+34,strategyqa,Do quadragenarian's have little memory capacity?,no,no,True,21,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",63,,,0,,,0,2.627
+35,strategyqa,Did the swallow play a role in a famous film about King Arthur?,yes,yes,True,25,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",75,,,0,,,0,2.897
+36,strategyqa,Is University of Pittsburgh easier to enter than FBI?,yes,yes,True,21,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",63,,,0,,,0,2.718
+37,strategyqa,Is basil safe from Hypervitaminosis D?,yes,no,False,21,True,self_consistency,0.33333333333333337,"[""yes"", ""no"", ""yes""]",63,no,False,498,yes,True,681,120.575
+38,strategyqa,Could Christopher Nolan's movies finance Cyprus's entire GDP?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.756
+39,strategyqa,Would you find olives at a heladeria?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.684
+40,strategyqa,Would Edward II of England have been born without Vikings?,no,yes,False,22,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",66,,,0,,,0,2.731
+41,strategyqa,Can Roman numerals fill the normal number of Sudoku box options?,no,no,True,24,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",72,,,0,,,0,2.787
+42,strategyqa,Would a Dodo hypothetically tower over Ma Petite?,yes,no,False,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.703
+43,strategyqa,Was P. G. Wodehouse's favorite book The Hunger Games?,no,no,True,26,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",78,,,0,,,0,2.88
+44,strategyqa,Can you taste Law & Order?,no,no,True,18,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",54,,,0,,,0,2.531
+45,strategyqa,Can Ford F-350 tow entire Yale University student body?,no,no,True,25,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",75,,,0,,,0,2.85
+46,strategyqa,Do Elementary School students typically need graphing calculators?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.755
+47,strategyqa,Would Tony Stark be considered a polymath?,yes,yes,True,20,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",60,,,0,,,0,2.615
+48,strategyqa,"During the pandemic, is door to door advertising considered inconsiderate?",yes,yes,True,25,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",75,,,0,,,0,2.986
+49,strategyqa,Are cucumbers often found in desert?,no,no,True,20,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",60,,,0,,,0,2.666

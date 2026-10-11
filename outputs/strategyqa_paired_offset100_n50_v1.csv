@@ -1,0 +1,51 @@
+sample_id,dataset,question,gold_answer,baseline_answer,baseline_correct,baseline_tokens,trigger_fired,trigger_signal,trigger_raw_value,trigger_samples,trigger_tokens,rereason_answer,rereason_correct,rereason_tokens,critique_answer,critique_correct,critique_tokens,wall_seconds
+0,strategyqa,"At Christmastime, do some films remind us that groundhog day is approaching?",yes,yes,True,28,True,self_consistency,0.33333333333333337,"[""no"", ""no"", ""yes""]",84,no,False,376,no,False,797,113.004
+1,strategyqa,Would Cyndi Lauper use milk substitute in her rice pudding?,yes,no,False,25,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",75,,,0,,,0,2.812
+2,strategyqa,Does Amtrak operate four wheel vehicles?,yes,no,False,19,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",57,,,0,,,0,2.552
+3,strategyqa,Has numerology helped shape hotel layouts?,yes,yes,True,19,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",57,,,0,,,0,2.589
+4,strategyqa,Does The Doctor keep his ship in his childhood home?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.706
+5,strategyqa,Does Adam Sandler skip celebrating Easter?,yes,no,False,19,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",57,,,0,,,0,2.595
+6,strategyqa,Do people of the Iyer caste eat meat?,no,yes,False,21,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",63,,,0,,,0,2.66
+7,strategyqa,Was the son of Tsar Nicholas a daredevil?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.684
+8,strategyqa,Did Jeremy Irons master sweep picking as a child?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.675
+9,strategyqa,Can you buy chlorine at a dollar store?,yes,no,False,20,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",60,,,0,,,0,2.649
+10,strategyqa,Could Plato have agreed with the beliefs of Jainism?,yes,no,False,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.736
+11,strategyqa,Does Family Guy take place on the American West Coast?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.744
+12,strategyqa,Is Bucharest located south of Egypt?,no,no,True,19,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",57,,,0,,,0,2.591
+13,strategyqa,Does acupuncture cause pain in many people?,no,no,True,19,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",57,,,0,,,0,2.564
+14,strategyqa,Was Superhero fiction invented in the digital format?,no,no,True,21,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",63,,,0,,,0,2.649
+15,strategyqa,Could Quartz be useful to humans if plants died off and there was no oxygen?,yes,yes,True,27,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",81,,,0,,,0,2.821
+16,strategyqa,Could you windsurf in Puerto Rico during Hurricane Maria?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.62
+17,strategyqa,Was a USB flash drive used in The Godfather?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.664
+18,strategyqa,Was the subject of Parsifal taken from British folklore?,yes,no,False,23,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",69,,,0,,,0,2.738
+19,strategyqa,Do the directors of The Matrix advocate for transgender rights?,yes,no,False,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.624
+20,strategyqa,Was the Second Amendment to the United States Constitution written without consideration for black Americans?,yes,yes,True,27,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",81,,,0,,,0,2.846
+21,strategyqa,Are the majority of Reddit users familiar with the Pledge of Allegiance?,yes,yes,True,26,True,self_consistency,0.33333333333333337,"[""no"", ""no"", ""yes""]",78,unknown,False,546,unknown,False,880,140.988
+22,strategyqa,Can a Toyota Supra make a vlog?,no,yes,False,21,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",63,,,0,,,0,2.664
+23,strategyqa,Does Snoopy look like Chance from Homeward Bound?,no,no,True,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.64
+24,strategyqa,Is there radiation where Nikola Tesla once worked?,yes,yes,True,20,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",60,,,0,,,0,2.596
+25,strategyqa,Did Jackson 5 members exceed number in The Osmonds?,no,yes,False,23,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",69,,,0,,,0,2.784
+26,strategyqa,Did England win any Olympic gold medals in 1800?,no,no,True,25,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",75,,,0,,,0,2.867
+27,strategyqa,Are Durian fruits an olfactory delight?,no,yes,False,20,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",60,,,0,,,0,2.604
+28,strategyqa,Have the Israelis played the Hammerstein Ballroom?,no,yes,False,21,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",63,,,0,,,0,2.592
+29,strategyqa,Would Şerafeddin Sabuncuoğlu have eaten Börek?,yes,yes,True,27,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",81,,,0,,,0,2.861
+30,strategyqa,Can you use the T-Mobile tuesdays app if you aren't a T-Mobile customer?,no,no,True,30,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",90,,,0,,,0,2.942
+31,strategyqa,Does Alec Baldwin have more children than Clint Eastwood?,no,yes,False,22,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",66,,,0,,,0,2.656
+32,strategyqa,Did the Berlin Wall prevent any athletes from competing in the 1936 Summer Olympics?,no,no,True,30,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",90,,,0,,,0,2.957
+33,strategyqa,Do the telescopes at Goldstone Deep Space Communications Complex work the night shift?,yes,yes,True,27,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",81,,,0,,,0,2.849
+34,strategyqa,Could a snowy owl survive in the Sonoran?,no,no,True,21,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",63,,,0,,,0,2.619
+35,strategyqa,Should someone prone to jealousy be in a polyamorous relationship?,no,no,True,24,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",72,,,0,,,0,2.815
+36,strategyqa,Can members of the Green Party of England and Wales vote in the USA?,no,no,True,26,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",78,,,0,,,0,2.891
+37,strategyqa,Does taking ukemi halt kinetic energy?,no,no,True,19,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",57,,,0,,,0,2.666
+38,strategyqa,Were the first missionaries required to attend mass on Sundays?,yes,yes,True,22,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",66,,,0,,,0,2.711
+39,strategyqa,Would John the Baptist be invited to a hypothetical cephalophore reunion in heaven?,no,no,True,28,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",84,,,0,,,0,2.897
+40,strategyqa,Was latest Republican governor of New Jersey as of 2020 heftiest politician ever?,no,no,True,31,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",93,,,0,,,0,3.021
+41,strategyqa,Does Nicole Kidman despise Roman Josi?,no,no,True,21,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",63,,,0,,,0,2.67
+42,strategyqa,Did the leader of Heaven's Gate consider himself a prophet?,yes,yes,True,23,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",69,,,0,,,0,2.799
+43,strategyqa,Are there mental disorders you can hide?,yes,yes,True,19,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",57,,,0,,,0,2.601
+44,strategyqa,Is Disneyland Paris the largest Disney resort?,no,no,True,19,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",57,,,0,,,0,2.584
+45,strategyqa,Does the Red Sea have biblical significance? ,yes,yes,True,20,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",60,,,0,,,0,2.619
+46,strategyqa,Is the Holy Land important to Eastern religions?,no,no,True,20,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",60,,,0,,,0,2.627
+47,strategyqa,Do depressed people travel to the Golden Gate Bridge often?,yes,no,False,22,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",66,,,0,,,0,2.691
+48,strategyqa,Could Godzilla have been killed by the Tohoku earthquake?,no,no,True,23,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",69,,,0,,,0,2.865
+49,strategyqa,Can the United Nations Framework Convention on Climate Change be held at the Javits Center?,no,yes,False,29,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",87,,,0,,,0,2.869
