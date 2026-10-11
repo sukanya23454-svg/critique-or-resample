@@ -1,6 +1,7 @@
 torch
-transformers>=4.51.0
-accelerate
+transformers==5.18.0
+datasets==3.6.0
+accelerate==1.15.0
 pandas
 matplotlib
 bitsandbytes  # optional: only needed for 4-bit judge model loading on smaller VRAM
