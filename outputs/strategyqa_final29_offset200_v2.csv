@@ -1,0 +1,30 @@
+sample_id,dataset,question,gold_answer,baseline_answer,baseline_correct,baseline_tokens,trigger_fired,trigger_signal,trigger_raw_value,trigger_samples,trigger_tokens,rereason_answer,rereason_correct,rereason_tokens,critique_answer,critique_correct,critique_tokens,wall_seconds
+0,strategyqa,Was Florence a Theocracy during Italian Renaissance?,yes,no,,20,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",60,,,0,,,0,48.22
+1,strategyqa,Can native wolverines be found in Miami?,no,no,,21,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",63,,,0,,,0,48.685
+2,strategyqa,Are saltwater crocodiles related to alligators?,yes,yes,,22,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",66,,,0,,,0,52.913
+3,strategyqa,Do manta rays live in water above the safe temperature for cold food storage?,yes,yes,,27,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",81,,,0,,,0,62.364
+4,strategyqa,Did Karl Marx influence the communist party of China?,yes,yes,,21,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",63,,,0,,,0,50.338
+5,strategyqa,Is the CIA part of the Department of Defense?,no,no,,21,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",63,,,0,,,0,49.951
+6,strategyqa,Would an American feel lost due to language barriers at Disneyland Paris?,no,no,,24,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",72,,,0,,,0,63.572
+7,strategyqa,Would  bald eagle deliver an urgent message before B-52?,no,no,,25,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",75,,,0,,,0,63.336
+8,strategyqa,Did Harvey Milk ever run for governor?,no,no,,19,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",57,,,0,,,0,49.181
+9,strategyqa,Can an art dealer buy Boeing 737-800 with a Da Vinci painting?,yes,no,,31,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",93,,,0,,,0,61.944
+10,strategyqa,Can you watch Rick and Morty in Mariana Trench?,yes,no,,24,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",72,,,0,,,0,60.786
+11,strategyqa,Did Easy Rider make a profit at the theater when it was released?,yes,yes,,25,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",75,,,0,,,0,62.501
+12,strategyqa,Has Oscar Wilde's most famous character ever been in an Eva Green project?,yes,yes,,26,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",78,,,0,,,0,63.504
+13,strategyqa,Could someone in Tokyo take a taxi to the The Metropolitan Museum of Art?,no,no,,26,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",78,,,0,,,0,61.256
+14,strategyqa,Is Y2K relevant to the plot of The Godfather?,no,no,,24,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",72,,,0,,,0,59.545
+15,strategyqa,Would the average American family find Adam Sandler's home to be too small?,no,yes,,27,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",81,,,0,,,0,58.715
+16,strategyqa,Can you find Bob Marley's face in most smoke shops?,yes,no,,24,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",72,,,0,,,0,61.969
+17,strategyqa,Did Mike Tyson train to use the gogoplata?,no,no,,23,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",69,,,0,,,0,61.28
+18,strategyqa,Has Burger King  contributed to a decrease in need for snowshoes?,yes,no,,26,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",78,,,0,,,0,62.862
+19,strategyqa,Could someone with fine motor control issues benefit from an altered keyboard layout?,yes,yes,,25,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",75,,,0,,,0,59.978
+20,strategyqa,Do Snow White dwarves best The Hobbit dwarves in battle?,no,no,,25,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",75,,,0,,,0,58.032
+21,strategyqa,Did any killer Manson band members were named for exceed Charles Manson's kills?,yes,no,,26,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",78,,,0,,,0,63.75
+22,strategyqa,Does the human stomach destroy a bee if ingested?,yes,yes,,22,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",66,,,0,,,0,53.11
+23,strategyqa,Can a cell fit inside of a shoebox?,yes,yes,,21,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",63,,,0,,,0,50.354
+24,strategyqa,Would the Ku Klux Klan welcome Opal Tometi into their group?,no,no,,27,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",81,,,0,,,0,62.986
+25,strategyqa,Was Al-Farabi a student of the Great Sheikh?,no,yes,,23,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",69,,,0,,,0,62.49
+26,strategyqa,Has Elon Musk's hairline changed?,yes,yes,,19,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",57,,,0,,,0,48.571
+27,strategyqa,Are rainbows devoid of color made by mixing yin and yang colors?,yes,no,,26,False,self_consistency,0.0,"[""no"", ""no"", ""no""]",78,,,0,,,0,62.711
+28,strategyqa,Are common carp sensitive to their environments?,no,yes,,19,False,self_consistency,0.0,"[""yes"", ""yes"", ""yes""]",57,,,0,,,0,49.584
