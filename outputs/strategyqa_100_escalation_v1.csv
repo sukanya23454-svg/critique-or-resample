@@ -1,0 +1,101 @@
+sample_id,dataset,question,gold_answer,baseline_answer,baseline_correct,baseline_tokens,trigger_fired,trigger_signal,trigger_raw_value,trigger_tokens,rereason_answer,rereason_correct,rereason_tokens,critique_answer,critique_correct,critique_tokens,wall_seconds
+0,strategyqa,Was Dr. Seuss a liar?,yes,no,,19,False,self_consistency,0.0,57,,,0,,,0,2.858
+1,strategyqa,Is an ammonia fighting cleaner good for pet owners?,yes,yes,,21,False,self_consistency,0.0,63,,,0,,,0,2.612
+2,strategyqa,Would a packed Wembley stadium be likely to have a descendant of the Mongols inside?,yes,yes,,30,False,self_consistency,0.0,90,,,0,,,0,2.932
+3,strategyqa,Can the majority of vowels be typed on the first line of a QWERTY keyboard?,yes,yes,,30,False,self_consistency,0.0,90,,,0,,,0,2.878
+4,strategyqa,Would Jolly Green Giant's largest monument look impressive next to Pyrenees?,no,yes,,27,False,self_consistency,0.0,81,,,0,,,0,2.85
+5,strategyqa,Did Supernatural break 2001 CW debuting shows seasons record?,yes,yes,,27,True,self_consistency,0.33333333333333337,81,no,,496,no,,972,142.37
+6,strategyqa,Did children read Harry Potter and the Philosopher's Stone during the Albanian Civil War?,yes,no,,29,False,self_consistency,0.0,87,,,0,,,0,2.969
+7,strategyqa,Can an emu chase a bogan?,yes,yes,,20,True,self_consistency,0.33333333333333337,60,no,,428,no,,714,111.493
+8,strategyqa,Could a single bitcoin ever cover cost of a Volkswagen Jetta?,yes,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.841
+9,strategyqa,Was Walt Disney able to email his illustrations to people living far away?,no,no,,25,False,self_consistency,0.0,75,,,0,,,0,2.84
+10,strategyqa,Did Malcolm X avoid eating ham?,yes,yes,,18,False,self_consistency,0.0,54,,,0,,,0,2.566
+11,strategyqa,Will Tokyo Tower be repainted only once during President Trump's first term?,yes,no,,26,False,self_consistency,0.0,78,,,0,,,0,2.84
+12,strategyqa,Are most books written as a Haiku?,no,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.61
+13,strategyqa,Is entire Common Era minuscule to lifespan of some trees?,yes,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.787
+14,strategyqa,Do German Shepherds worry about the Abitur?,no,no,,22,False,self_consistency,0.0,66,,,0,,,0,2.66
+15,strategyqa,Does crucifixion violate US eighth amendment?,yes,yes,,20,False,self_consistency,0.0,60,,,0,,,0,2.606
+16,strategyqa,Did Boris Yeltsin watch the 2008 Summer Olympics?,no,no,,26,False,self_consistency,0.0,78,,,0,,,0,2.858
+17,strategyqa,"If you're reducing salt intake, are olives a healthy snack?",no,yes,,25,False,self_consistency,0.0,75,,,0,,,0,2.824
+18,strategyqa,Is Final Fantasy VI closer to beginning than end of its franchise?,yes,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.836
+19,strategyqa,Can an anchovy born in 2020 survive 25th US census?,no,no,,30,False,self_consistency,0.0,90,,,0,,,0,2.987
+20,strategyqa,Did the band Led Zeppelin own a prime number of gilded gramophones?,yes,no,,28,False,self_consistency,0.0,84,,,0,,,0,2.913
+21,strategyqa,Was Mother Theresa a follower of atheism?,no,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.605
+22,strategyqa,Could a fan of the Botany Swarm vote for John Key?,yes,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.789
+23,strategyqa,Can the theory of cultural hegemony explain global warming?,no,no,,22,False,self_consistency,0.0,66,,,0,,,0,2.678
+24,strategyqa,Have Douglas fir been used to fight wars?,yes,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.622
+25,strategyqa,Would an adherent of Zoroastrianism consult the Quran for religious guidance?,no,no,,28,False,self_consistency,0.0,84,,,0,,,0,2.887
+26,strategyqa,Will a rock float in the atmosphere of Earth?,no,no,,21,False,self_consistency,0.0,63,,,0,,,0,2.621
+27,strategyqa,Would Iggy Pop travel with Justin Bieber?,no,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.607
+28,strategyqa,Would United States Air Force consider Return of the Jedi's Han Solo bad hypothetical candidate?,yes,yes,,28,False,self_consistency,0.0,84,,,0,,,0,2.933
+29,strategyqa,Did any Golden Globe winners attend John Kerry's alma mater?,yes,yes,,23,False,self_consistency,0.0,69,,,0,,,0,2.833
+30,strategyqa,Did Francois Mitterrand ever meet Barak Obama while they both held the position of President?,no,no,,30,False,self_consistency,0.0,90,,,0,,,0,2.976
+31,strategyqa,Is the Liberty Bell still in its original location?,no,yes,,21,True,self_consistency,0.33333333333333337,63,no,,305,yes,,475,71.706
+32,strategyqa,Can a Muslim eat a McRib sandwich?,no,yes,,20,False,self_consistency,0.0,60,,,0,,,0,2.537
+33,strategyqa,Would Felicity Huffman vote for Mike DeWine?,no,no,,22,False,self_consistency,0.0,66,,,0,,,0,2.646
+34,strategyqa,Is it possible to get killed walking to the Very Large Telescope?,yes,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.783
+35,strategyqa,Would it be common to find a penguin in Miami?,no,no,,23,False,self_consistency,0.0,69,,,0,,,0,2.728
+36,strategyqa,Is the E.T. the Extra-Terrestrial Atari Landfill story an urban legend?,yes,yes,,29,False,self_consistency,0.0,87,,,0,,,0,3.002
+37,strategyqa,Do American wheelchair users know what the ADA is?,yes,yes,,21,False,self_consistency,0.0,63,,,0,,,0,2.755
+38,strategyqa,Does Capricorn astrology symbol have all of the parts of a chimera?,no,yes,,27,False,self_consistency,0.0,81,,,0,,,0,2.957
+39,strategyqa,Is Morocco an ideal location for water skiing?,no,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.639
+40,strategyqa,Can a strawberry get worms similar to dogs?,yes,yes,,20,False,self_consistency,0.0,60,,,0,,,0,2.568
+41,strategyqa,Is dopamine snorted nasally by drug users?,no,yes,,21,False,self_consistency,0.0,63,,,0,,,0,2.638
+42,strategyqa,Would an environmentalist advocate for preventing domestic canine reproduction?,yes,yes,,22,True,self_consistency,0.33333333333333337,66,no,,542,no,,780,129.826
+43,strategyqa,Are leaves from coca good for gaining weight?,no,no,,21,False,self_consistency,0.0,63,,,0,,,0,2.573
+44,strategyqa,Can a sea turtle play tennis using a tennis racket?,no,no,,22,False,self_consistency,0.0,66,,,0,,,0,2.621
+45,strategyqa,Can Hulk's alter ego explain atomic events?,yes,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.682
+46,strategyqa,Would three commas be sufficient for displaying US 2018 GDP?,no,no,,26,False,self_consistency,0.0,78,,,0,,,0,2.796
+47,strategyqa,Can a person be diagnosed with a Great Depression?,no,no,,21,False,self_consistency,0.0,63,,,0,,,0,2.601
+48,strategyqa,Is Edgar Allan Poe obscure in the world of horror fiction?,no,no,,23,False,self_consistency,0.0,69,,,0,,,0,2.755
+49,strategyqa,Does Ahura Mazda have a rivalry with Zeus?,no,no,,21,False,self_consistency,0.0,63,,,0,,,0,2.612
+50,strategyqa,Would John Muir not likely have a vitamin D deficiency?,yes,yes,,23,False,self_consistency,0.0,69,,,0,,,0,2.741
+51,strategyqa,Could the Dominican Order hypothetically defeat Blessed Gerard's order?,no,yes,,23,False,self_consistency,0.0,69,,,0,,,0,2.73
+52,strategyqa,Could a cow produce Harvey Milk?,no,no,,18,False,self_consistency,0.0,54,,,0,,,0,2.511
+53,strategyqa,Was the AK-47 used in the Seven Years' War?,no,no,,25,False,self_consistency,0.0,75,,,0,,,0,2.82
+54,strategyqa,Do guitarist's have fingers that can handle pain better than average?,yes,no,,24,False,self_consistency,0.0,72,,,0,,,0,2.771
+55,strategyqa,Could a sloth hypothetically watch an entire episode of Scrubs underwater?,yes,no,,26,False,self_consistency,0.0,78,,,0,,,0,2.833
+56,strategyqa,Did Bill Gates help to develop the PlayStation 4?,no,no,,22,False,self_consistency,0.0,66,,,0,,,0,2.755
+57,strategyqa,Can you write a whole Haiku in a single tweet?,yes,yes,,23,False,self_consistency,0.0,69,,,0,,,0,2.702
+58,strategyqa,Are Donkeys part of Christmas celebrations?,yes,yes,,19,True,self_consistency,0.33333333333333337,57,no,,408,yes,,851,121.462
+59,strategyqa,Is Europa (moon) name origin related to Amunet?,no,no,,24,False,self_consistency,0.0,72,,,0,,,0,2.905
+60,strategyqa,Would a duke hypothetically be subservient to a Tsar?,yes,yes,,25,False,self_consistency,0.0,75,,,0,,,0,2.85
+61,strategyqa,Can Jabberwocky be considered a sonnet?,no,no,,23,False,self_consistency,0.0,69,,,0,,,0,2.75
+62,strategyqa,Can you see Stonehenge from a window in Dusseldorf?,no,no,,25,False,self_consistency,0.0,75,,,0,,,0,2.865
+63,strategyqa,Can the Moscow Kremlin fit inside Disney Land?,yes,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.619
+64,strategyqa,Is Tony Bennett's middle name shared by a former UFC champion?,yes,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.818
+65,strategyqa,Would Jon Brower Minnoch break a chair before Voyager 2 launch mass?,no,yes,,27,False,self_consistency,0.0,81,,,0,,,0,2.906
+66,strategyqa,Did Douglas Adams use email as a child?,no,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.664
+67,strategyqa,Was Elizabeth II the Queen during the Persian Gulf War?,yes,yes,,22,False,self_consistency,0.0,66,,,0,,,0,2.703
+68,strategyqa,Does a bumblebee have to worry about spider veins?,no,no,,23,False,self_consistency,0.0,69,,,0,,,0,2.778
+69,strategyqa,Was Lorenzo de Medici's patronage of Da Vinci exclusive?,no,no,,24,False,self_consistency,0.0,72,,,0,,,0,2.815
+70,strategyqa,Can sunlight travel to the deepest part of the Black Sea?,no,no,,23,False,self_consistency,0.0,69,,,0,,,0,2.807
+71,strategyqa,Is Canon Inc. a Kabushiki gaisha?,yes,yes,,22,False,self_consistency,0.0,66,,,0,,,0,2.674
+72,strategyqa,Do people remember Lucille Ball's winemaking as successful?,no,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.813
+73,strategyqa,Would a model be likely to frequently enjoy the menu at Cookout?,no,no,,25,False,self_consistency,0.0,75,,,0,,,0,2.85
+74,strategyqa,Was Charlemagne's father instrumental in outcome of the Battle of Tours?,no,yes,,26,False,self_consistency,0.0,78,,,0,,,0,2.875
+75,strategyqa,Karachi was a part of Alexander the Great's success?,yes,yes,,22,False,self_consistency,0.0,66,,,0,,,0,2.673
+76,strategyqa,"Can you fit every resident of Auburn, New York, in Tropicana Field?",yes,yes,,28,False,self_consistency,0.0,84,,,0,,,0,2.898
+77,strategyqa,Can atheism surpass Christianity in American black communities by 2021?,no,no,,27,False,self_consistency,0.0,81,,,0,,,0,2.897
+78,strategyqa,Is winter associated with hot temperatures?,no,no,,18,False,self_consistency,0.0,54,,,0,,,0,2.645
+79,strategyqa,Can 200 men end to end cover Great Pyramid of Giza's base?,yes,yes,,29,False,self_consistency,0.0,87,,,0,,,0,2.937
+80,strategyqa,Is Bern located east of Paris?,yes,no,,18,False,self_consistency,0.0,54,,,0,,,0,2.537
+81,strategyqa,Would Bandy be likely to become popular in Texas?,no,no,,22,False,self_consistency,0.0,66,,,0,,,0,2.684
+82,strategyqa,"Is ""A Tale of Two Cities"" a parody of the Bible?",no,no,,25,False,self_consistency,0.0,75,,,0,,,0,2.808
+83,strategyqa,Would a pear sink in water?,no,no,,18,False,self_consistency,0.0,54,,,0,,,0,2.575
+84,strategyqa,Is dessert eaten before breakfast?,no,no,,17,False,self_consistency,0.0,51,,,0,,,0,2.517
+85,strategyqa,Would Nancy Pelosi have hypothetically been on same side as Gerald Ford?,no,no,,25,False,self_consistency,0.0,75,,,0,,,0,2.82
+86,strategyqa,Did Columbus obtain his funding from the rulers of the Portugese Empire?,no,no,,25,False,self_consistency,0.0,75,,,0,,,0,2.843
+87,strategyqa,Tata Hexa can accomodate every Spice Girl?,yes,no,,21,False,self_consistency,0.0,63,,,0,,,0,2.618
+88,strategyqa,Is the Mona Lisa in the same museum as the Venus de Milo?,yes,yes,,25,False,self_consistency,0.0,75,,,0,,,0,2.845
+89,strategyqa,Could Bart Simpson have owned comics with The Joker?,yes,yes,,21,True,self_consistency,0.33333333333333337,63,yes,,534,yes,,649,116.438
+90,strategyqa,Could all People's Volunteer Army hypothetically be transported on Symphony of the Seas?,no,no,,27,True,self_consistency,0.33333333333333337,81,no,,547,unknown,,635,125.417
+91,strategyqa,Would the chef at La Grenouille find salsa to be a strange request?,yes,yes,,27,False,self_consistency,0.0,81,,,0,,,0,2.951
+92,strategyqa,Could Snoopy transmit rabies?,no,no,,18,False,self_consistency,0.0,54,,,0,,,0,2.555
+93,strategyqa,Could a delicious recipe be made with The Onion?,no,yes,,21,False,self_consistency,0.0,63,,,0,,,0,2.634
+94,strategyqa,Are you likely to find a crucifix in Karachi?,no,yes,,22,False,self_consistency,0.0,66,,,0,,,0,2.685
+95,strategyqa,Were the Spice Girls inspired by Little Mix?,no,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.6
+96,strategyqa,Does it seem like the Gorillaz is composed of more members than they have?,yes,yes,,28,False,self_consistency,0.0,84,,,0,,,0,2.906
+97,strategyqa,Do people take laxatives because they enjoy diarrhea?,no,no,,21,False,self_consistency,0.0,63,,,0,,,0,2.656
+98,strategyqa,4 Krispy Kreme glazed doughnuts exceed AHA  daily sugar allowance?,yes,yes,,28,False,self_consistency,0.0,84,,,0,,,0,2.897
+99,strategyqa,Can a woman on average have a baby before wheat seed blooms?,no,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.807

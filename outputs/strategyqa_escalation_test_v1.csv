@@ -1,0 +1,21 @@
+sample_id,dataset,question,gold_answer,baseline_answer,baseline_correct,baseline_tokens,trigger_fired,trigger_signal,trigger_raw_value,trigger_tokens,rereason_answer,rereason_correct,rereason_tokens,critique_answer,critique_correct,critique_tokens,wall_seconds
+0,strategyqa,Was Dr. Seuss a liar?,yes,no,,19,False,self_consistency,0.0,57,,,0,,,0,2.672
+1,strategyqa,Is an ammonia fighting cleaner good for pet owners?,yes,yes,,21,False,self_consistency,0.0,63,,,0,,,0,2.652
+2,strategyqa,Would a packed Wembley stadium be likely to have a descendant of the Mongols inside?,yes,yes,,30,False,self_consistency,0.0,90,,,0,,,0,2.961
+3,strategyqa,Can the majority of vowels be typed on the first line of a QWERTY keyboard?,yes,yes,,30,False,self_consistency,0.0,90,,,0,,,0,2.996
+4,strategyqa,Would Jolly Green Giant's largest monument look impressive next to Pyrenees?,no,yes,,27,False,self_consistency,0.0,81,,,0,,,0,2.933
+5,strategyqa,Did Supernatural break 2001 CW debuting shows seasons record?,yes,no,,27,True,self_consistency,0.33333333333333337,81,no,,547,no,,957,148.432
+6,strategyqa,Did children read Harry Potter and the Philosopher's Stone during the Albanian Civil War?,yes,no,,29,False,self_consistency,0.0,87,,,0,,,0,2.961
+7,strategyqa,Can an emu chase a bogan?,yes,yes,,20,True,self_consistency,0.33333333333333337,60,yes,,497,yes,,727,127.186
+8,strategyqa,Could a single bitcoin ever cover cost of a Volkswagen Jetta?,yes,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.798
+9,strategyqa,Was Walt Disney able to email his illustrations to people living far away?,no,no,,25,False,self_consistency,0.0,75,,,0,,,0,2.874
+10,strategyqa,Did Malcolm X avoid eating ham?,yes,yes,,18,False,self_consistency,0.0,54,,,0,,,0,2.59
+11,strategyqa,Will Tokyo Tower be repainted only once during President Trump's first term?,yes,no,,26,False,self_consistency,0.0,78,,,0,,,0,2.871
+12,strategyqa,Are most books written as a Haiku?,no,no,,20,False,self_consistency,0.0,60,,,0,,,0,2.667
+13,strategyqa,Is entire Common Era minuscule to lifespan of some trees?,yes,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.809
+14,strategyqa,Do German Shepherds worry about the Abitur?,no,no,,22,False,self_consistency,0.0,66,,,0,,,0,2.733
+15,strategyqa,Does crucifixion violate US eighth amendment?,yes,yes,,20,False,self_consistency,0.0,60,,,0,,,0,2.652
+16,strategyqa,Did Boris Yeltsin watch the 2008 Summer Olympics?,no,no,,26,False,self_consistency,0.0,78,,,0,,,0,2.885
+17,strategyqa,"If you're reducing salt intake, are olives a healthy snack?",no,yes,,25,False,self_consistency,0.0,75,,,0,,,0,2.864
+18,strategyqa,Is Final Fantasy VI closer to beginning than end of its franchise?,yes,yes,,24,False,self_consistency,0.0,72,,,0,,,0,2.824
+19,strategyqa,Can an anchovy born in 2020 survive 25th US census?,no,no,,30,False,self_consistency,0.0,90,,,0,,,0,3.007
