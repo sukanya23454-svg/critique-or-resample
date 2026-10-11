@@ -1,4 +1,5 @@
 from __future__ import annotations
+import json
 
 import argparse
 import csv
@@ -30,7 +31,7 @@ def build_trigger(trigger_type: str):
 PAIRED_CSV_FIELDS = [
     "sample_id", "dataset", "question", "gold_answer",
     "baseline_answer", "baseline_correct", "baseline_tokens",
-    "trigger_fired", "trigger_signal", "trigger_raw_value", "trigger_tokens",
+    "trigger_fired", "trigger_signal", "trigger_raw_value", "trigger_samples", "trigger_tokens",
     "rereason_answer", "rereason_correct", "rereason_tokens",
     "critique_answer", "critique_correct", "critique_tokens",
     "wall_seconds",
@@ -109,7 +110,9 @@ def run_paired_condition(
                 "baseline_answer": baseline_answer, "baseline_correct": baseline_correct,
                 "baseline_tokens": baseline_tokens,
                 "trigger_fired": trigger_fired, "trigger_signal": result.signal_name,
-                "trigger_raw_value": result.raw_value, "trigger_tokens": trigger_tokens,
+                "trigger_raw_value": result.raw_value,
+                "trigger_samples": json.dumps(result.samples),
+                "trigger_tokens": trigger_tokens,
                 "rereason_answer": "", "rereason_correct": "", "rereason_tokens": 0,
                 "critique_answer": "", "critique_correct": "", "critique_tokens": 0,
                 "wall_seconds": 0,
@@ -269,6 +272,7 @@ def main():
     parser.add_argument("--trigger_type", default="self_consistency",
                          choices=["self_consistency", "entropy"])
     parser.add_argument("--n_samples", type=int, default=300)
+    parser.add_argument("--offset", type=int, default=0, help="skip examples after seeded shuffle for non-overlapping batches")
     parser.add_argument("--model_name", default="Qwen/Qwen3-8B",
                          help="base model: answers every condition")
     parser.add_argument("--judge_model_name", default="Qwen/Qwen2.5-32B-Instruct",
@@ -287,9 +291,9 @@ def main():
     from pipeline.dataset_loaders import load_strategyqa, load_hotpotqa
 
     if args.dataset == "strategyqa":
-        dataset = list(load_strategyqa(n=args.n_samples))
+        dataset = list(load_strategyqa(n=args.n_samples, offset=args.offset))
     else:
-        dataset = list(load_hotpotqa(n=args.n_samples))
+        dataset = list(load_hotpotqa(n=args.n_samples, offset=args.offset))
 
     from pipeline.model_backend import (
         load_base_model, make_base_generate_fn, make_extract_answer_fn,

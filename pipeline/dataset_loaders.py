@@ -34,6 +34,7 @@ def load_strategyqa(
     n: int | None = None,
     shuffle: bool = True,
     seed: int = 42,
+    offset: int = 0,
 ) -> Iterator[dict]:
     """
     Yields {"question": ..., "gold": "yes"/"no"} dicts.
@@ -69,8 +70,7 @@ def load_strategyqa(
 
     if shuffle:
         random.Random(seed).shuffle(examples)
-    if n is not None:
-        examples = examples[:n]
+    examples = examples[offset:] if n is None else examples[offset:offset + n]
 
     log(f"StrategyQA: loaded {len(examples)} samples")
     for ex in examples:
@@ -82,6 +82,7 @@ def load_hotpotqa(
     n: int | None = None,
     shuffle: bool = True,
     seed: int = 42,
+    offset: int = 0,
 ) -> Iterator[dict]:
     """
     Yields {"question": ..., "gold": ...} dicts.
@@ -104,8 +105,7 @@ def load_hotpotqa(
 
     if shuffle:
         random.Random(seed).shuffle(examples)
-    if n is not None:
-        examples = examples[:n]
+    examples = examples[offset:] if n is None else examples[offset:offset + n]
 
     log(f"HotpotQA: loaded {len(examples)} samples")
     for ex in examples:
